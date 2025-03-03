@@ -1,16 +1,24 @@
-<h1>List of Employees</h1>
+<div class="container">
+  <div class="employee-list">
+    <h2>Employees</h2>
 
-<div class="employee-container" *ngIf="employees.length > 0; else noEmployees">
-  <div class="employee-card" *ngFor="let emp of employees">
-    <h2>{{ emp.employee_name }}</h2>
-    <p><strong>Designation:</strong> {{ emp.designation }}</p>
-    <p><strong>Email:</strong> {{ emp.email }}</p>
-    <p><strong>Gender:</strong> {{ emp.gender }}</p>
-    <p><strong>Phone:</strong> {{ emp.phone_number }}</p>
-    <p><strong>Department ID:</strong> {{ emp.department_id }}</p>
+    <ul>
+      <li *ngFor="let emp of employees" (click)="selectEmployee(emp)">
+        <strong>{{ emp.employee_name }}</strong>
+        <br />
+        <span class="designation">{{ emp.designation }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="employee-details" [class.show]="selectedEmployee">
+    <ng-container *ngIf="selectedEmployee">
+      <h2>{{ selectedEmployee.employee_name }}</h2>
+      <p><strong>Designation:</strong> {{ selectedEmployee.designation }}</p>
+      <p><strong>Email:</strong> {{ selectedEmployee.email }}</p>
+      <p><strong>Gender:</strong> {{ selectedEmployee.gender }}</p>
+      <p><strong>Phone:</strong> {{ selectedEmployee.phone_number }}</p>
+      <p><strong>Department:</strong> {{ selectedEmployee.department_id }}</p>
+    </ng-container>
   </div>
 </div>
-
-<ng-template #noEmployees>
-  <p>No employees found.</p>
-</ng-template>

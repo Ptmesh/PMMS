@@ -1,0 +1,49 @@
+.nav1 {
+  background: linear-gradient(45deg, #1e3c72, #2a5298);
+  padding: 15px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #ffcc00;
+} */
+
+nav {
+  background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #005bb5;
+}

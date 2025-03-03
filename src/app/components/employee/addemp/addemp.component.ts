@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-addemp',
   imports: [],
   templateUrl: './addemp.component.html',
-  styleUrl: './addemp.component.css'
+  styleUrl: './addemp.component.css',
 })
-export class AddempComponent {
-
-}
+export class AddempComponent {}

@@ -61,3 +61,20 @@
   height: 100%;
   border-left: 5px solid #ff9933;
 }
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}

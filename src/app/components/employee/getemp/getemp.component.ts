@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Employee } from '../../../_datamodels/Organisation';
 import { EmployeeService } from '../../../services/employee.service';
-import { AddempComponent } from '../addemp/addemp.component';
+// import { AddempComponent } from '../addemp/addemp.component';
 
 @Component({
   selector: 'app-getemp',
-  imports: [CommonModule, AddempComponent],
+  imports: [CommonModule],
   templateUrl: './getemp.component.html',
   styleUrl: './getemp.component.css',
 })
@@ -28,6 +28,16 @@ export class GetempComponent {
 
   selectEmployee(emp: Employee) {
     this.selectedEmployee = emp;
+  }
+
+  deleteEmployee(id: number | undefined) {
+    if (id === undefined) return;
+    if (confirm('Are you sure you want to delete this employee?')) {
+      this.empSer.deleteEmployee(id).subscribe(() => {
+        this.loadEmployees();
+        this.selectedEmployee = null;
+      });
+    }
   }
 
   // addEmployee(newEmp: Employee) {

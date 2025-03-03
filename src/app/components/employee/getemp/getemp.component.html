@@ -19,6 +19,9 @@
       <p><strong>Gender:</strong> {{ selectedEmployee.gender }}</p>
       <p><strong>Phone:</strong> {{ selectedEmployee.phone_number }}</p>
       <p><strong>Department:</strong> {{ selectedEmployee.department_id }}</p>
+      <button class="delete-btn" (click)="deleteEmployee(selectedEmployee.id)">
+        Delete
+      </button>
     </ng-container>
   </div>
 </div>
